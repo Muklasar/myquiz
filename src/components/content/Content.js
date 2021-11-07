@@ -65,8 +65,8 @@ class Content extends Component {
                 <div>
                     {data ?
                         <div>
-                            <div className="container">
-                                <div className="row border-bottom pt-4 " style={{ height: '15vh' }}>
+                            <div className="container border-bottom">
+                                <div className="row pt-4" style={{ height: '15vh' }}>
                                     {currentIndex + 1}. {data[currentIndex].question}
                                 </div>
                             </div>
