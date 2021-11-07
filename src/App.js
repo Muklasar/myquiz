@@ -45,12 +45,14 @@ class App extends Component {
         <div className="row">
           <Nav />
         </div>
-        <div className="row shadow m-5 bg-body rounded ">
-          <div className="col-3 bg-info" style={{ height: '70vh' }}>
-            <Sidenav quizHandler={this.quizHandler} nextQuiz={this.nextQuiz} />
-          </div>
-          <div className="col-9" style={{ height: '70vh' }}>
-            <Content data={quizData} quizEnd={endQuiz} endQuizHandler={this.endQuizHandler} />
+        <div className="container shadow bg-body rounded mt-5">
+          <div className="row ">
+            <div className="col-lg-3 col-sm-6 bg-info" style={{ height: '70vh' }}>
+              <Sidenav quizHandler={this.quizHandler} nextQuiz={this.nextQuiz} />
+            </div>
+            <div className="col-lg-9 col-sm-6" style={{ height: '70vh' }}>
+              <Content data={quizData} quizEnd={endQuiz} endQuizHandler={this.endQuizHandler} />
+            </div>
           </div>
         </div>
       </div>

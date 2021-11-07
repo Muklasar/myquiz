@@ -56,17 +56,19 @@ class Content extends Component {
         console.log('data', this.props.data)
         console.log('allAns', allAns)
         return (
-            quizEnd ? 
-            <div className="d-flex flex-column justify-content-center align-items-center pt-5">
-                <h4 className="text-dark">Your Score is : {score}</h4>
-                <PieChart cr={crAns} wr={wrAns}/>
-            </div>
+            quizEnd ?
+                <div className="d-flex flex-column justify-content-center align-items-center pt-2">
+                    <h4 className="text-dark">Your Score is : {score}</h4>
+                    <PieChart cr={crAns} wr={wrAns} />
+                </div>
                 :
                 <div>
                     {data ?
-                        <>
-                            <div className="row border-bottom pt-5" style={{ height: '15vh', fontSize: '18px', paddingLeft: '20px' }}>
-                                {currentIndex + 1}. {data[currentIndex].question}
+                        <div>
+                            <div className="container">
+                                <div className="row border-bottom pt-4" style={{ height: '15vh', fontSize: '18px', paddingLeft: '20px' }}>
+                                    {currentIndex + 1}. {data[currentIndex].question}
+                                </div>
                             </div>
                             <div className="row p-5" style={{ height: '55vh' }}>
                                 {answer}
@@ -84,7 +86,7 @@ class Content extends Component {
                                 </div>
                             </div>
 
-                        </>
+                        </div>
                         :
                         <div className="d-flex justify-content-center align-items-center" style={{ padding: '10rem' }}>
                             <h4 className="text-dark">Select Your Quiz</h4>
